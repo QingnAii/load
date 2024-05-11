@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "payload_dumper"
+version = "0.3.0"
+description = "Dump partitions from Android's payload.bin"
+authors = ["Rasmus Moorats <xx@nns.ee>"]
+readme = "README.md"
+repository = "https://github.com/nnsee/payload-dumper"
+homepage = "https://github.com/nnsee/payload-dumper"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+protobuf = "^3.19.1"
+bsdiff4 = "^1.2.1"
+enlighten = "^1.12.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+payload_dumper = "payload_dumper:dumper.main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
